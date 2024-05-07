@@ -1,0 +1,10 @@
+# Environment variales such as API keys
+.env
+
+# SQLite executables
+sqldiff.exe
+sqlite3_analyzer.exe
+sqlite3.exe
+
+# SQLite database files should not be included in version control
+*.db
