@@ -3,6 +3,8 @@
 
 ### This project is a Discord chat bot which combines the ability to use a GPT-based response format and also utilizes additional information from internal sources persisted into a SQLite3 database.
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/iovmhhzY2PA/0.jpg)](https://youtu.be/iovmhhzY2PA)
+
 ## Sections
 This project consists of two sections:
 1. The Discord bot instructions located in the root of this repo.
