@@ -34,11 +34,16 @@ python main.py
 ```
 5. At this point, the bot should now be active and running in the Discord server. Here are all the valid commands to try.
 ```bash
-!help # Responds with help message
-!hello # Basic hello command
-!funfact # Gives a fun car fact
-!cars {your question} # Ask a question about the automotives.db cars table
-!manufacturers {your question} # Ask a question about the automotives.db manufacturers table
+!help 
+# Responds with help message
+!hello 
+# Basic hello command
+!funfact 
+# Gives a fun car fact
+!cars {your question} 
+# Ask a question about the automotives.db cars table
+!manufacturers {your question} 
+# Ask a question about the automotives.db manufacturers table
 ```
 
 ### Bot Specifications
