@@ -1,10 +1,13 @@
 import os
 import discord
 from dotenv import load_dotenv
+from gpt import GptUtil
 
 load_dotenv()
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+
 GPT_TOKEN = os.getenv('GPT_TOKEN')
+gpt: GptUtil = GptUtil(GPT_TOKEN)
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -23,5 +26,8 @@ async def on_message(message):
 
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
+
+    if message.content == 'hey':
+        await message.channel.send(gpt.ask_question('whats 2 + 2'))
 
 client.run(DISCORD_TOKEN)
