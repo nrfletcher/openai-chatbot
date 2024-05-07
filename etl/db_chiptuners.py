@@ -5,7 +5,7 @@ conn = sqlite3.connect('automotives.db')
 cursor = conn.cursor()
 
 # Execute the SQL script
-with open('sources/chiptuning.sql', 'r') as f:
+with open('etl/sources/chiptuning.sql', 'r') as f:
     cursor.executescript(f.read())
 
 # Add our foreign key association to manufacturer via make_id

@@ -23,7 +23,7 @@ cursor.execute("""
 unique_countries = set()
 
 # Open the CSV file and insert the data into the 'manufacturers' table
-with open('sources/manufacturers.csv', 'r') as csv_file:
+with open('etl/sources/manufacturers.csv', 'r') as csv_file:
     csv_reader = csv.reader(csv_file)
     for row in csv_reader:
         make, country, year = row

@@ -1,4 +1,6 @@
 # Discord Chatbot
+## AutoBot is a Discord bot that utilizes and internal car database!
+
 ### This project is a Discord chat bot which combines the ability to use a GPT-based response format and also utilizes additional information from internal sources persisted into a SQLite3 database.
 
 ## Sections
@@ -18,12 +20,32 @@ To run this project do the following:
 ```python
 pip install -r requirements.txt
 ```
+2. Create a '.env' file in the root directory and add your tokens for "DISCORD_TOKEN" and "GPT_TOKEN"
+```bash
+touch .env
+```
+3. Run the build command to create the database necessary for using the '!cars' and '!manufacturers' commands.
+```python
+python build.py
+```
+4. Start the Discord bot 
+```python
+python main.py
+```
+5. At this point, the bot should now be active and running in the Discord server. Here are all the valid commands to try.
+```bash
+!help # Responds with help message
+!hello # Basic hello command
+!funfact # Gives a fun car fact
+!cars {your question} # Ask a question about the automotives.db cars table
+!manufacturers {your question} # Ask a question about the automotives.db manufacturers table
+```
 
 ### Bot Specifications
 1. Utilizes the automotives.db SQLite3 database
 2. Recognizes '!help' command; reply with instructions
-3. Provides 3 unique commands; '!stat
-4. 
+3. Provides 3 unique commands; '!cars' and '!manufacturers' which interact with the database, and '!funfact' which does not.
+4. The external datasource is the automotives.db from the ETL project.
 
 # Extract, Transfer, Load (ETL folder)
 - Focus: Automotive Industry

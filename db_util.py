@@ -9,7 +9,7 @@ class DbUtil:
         self.cursor = None
 
     def connect(self):
-        self.conn = sqlite3.connect('etl/automotives.db')
+        self.conn = sqlite3.connect('automotives.db')
         self.cursor = self.conn.cursor()
 
     def disconnect(self):
@@ -17,7 +17,7 @@ class DbUtil:
         self.conn.close()
 
     def query(self, table: str):
-        self.cursor.execute(f'SELECT * FROM {table}')
+        self.cursor.execute(f'SELECT * FROM {table} LIMIT 150')
         rows = self.cursor.fetchall()
         data: list = []
         columns = [desc[0] for desc in self.cursor.description]

@@ -21,7 +21,7 @@ cursor.execute("""
 """)
 
 # Open the CSV file and insert the data into the 'manufacturers' table
-with open('sources/worldhappiness.csv', 'r') as csv_file:
+with open('etl/sources/worldhappiness.csv', 'r') as csv_file:
     csv_reader = csv.reader(csv_file)
     for row in csv_reader:
         rank, country, happiness, gdp, social, life_expectancy, freedom, generosity, perception = row

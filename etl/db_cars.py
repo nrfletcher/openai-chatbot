@@ -19,7 +19,7 @@ cursor.execute("""
 """)
 
 # Open the CSV file and insert the data into the 'manufacturers' table
-with open('sources/cars.csv', 'r') as csv_file:
+with open('etl/sources/cars.csv', 'r') as csv_file:
     csv_reader = csv.reader(csv_file)
     next(csv_reader, None)
     for row in csv_reader:
