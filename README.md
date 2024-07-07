@@ -1,7 +1,6 @@
-# Discord Chatbot
-## AutoBot is a Discord bot that utilizes and internal car database!
+# OpenAI Discord Chatbot
 
-### This project is a Discord chat bot which combines the ability to use a GPT-based response format and also utilizes additional information from internal sources persisted into a SQLite3 database.
+### This project is a Discord chat bot which combines the ability to use an OpenAI GPT-based response format and also utilizes additional information from internal sources persisted into a SQLite3 database.
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/iovmhhzY2PA/0.jpg)](https://youtu.be/iovmhhzY2PA)
 
@@ -10,11 +9,14 @@ This project consists of two sections:
 1. The Discord bot instructions located in the root of this repo.
 2. The ETL instructions located inside of the 'etl' folder.
 
-<br>
-In order to build and run this project, you must complete the steps in both the instructions below as well as the steps regarding SQLite3 installation which can be found in the ETL section of the writeup.
+In order to build and run this project, you must complete the steps in both the instructions below as well as the steps regarding SQLite3 installation which can be found in the ETL section of the writeup. 
 <br>
 <br>
 If SQLite3 is successfully installed globally, you can build this project by following the instructions below.
+<br>
+<br>
+Additionally, one must have a Discord server configured to run a bot. An OpenAI token and Discord server token are required to run this program; instructions on how to do either of these things are outside the scope of this project.
+
 
 ## Instructions
 To run this project do the following:
