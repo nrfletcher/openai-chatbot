@@ -1,10 +1,19 @@
-# OpenAI Discord Chatbot
+<div align="center">
+<a name="readme-top"></a>
 
-### This project is a Discord chat bot which combines the ability to use an OpenAI GPT-based response format and also utilizes additional information from internal sources persisted into a SQLite3 database.
+# 🤖 AutoBot
+An OpenAI-based Discord chatbot.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/iovmhhzY2PA/0.jpg)](https://youtu.be/iovmhhzY2PA)
+</div>
 
-## Sections
+## ℹ️ About
+AutoBot is a Discord chat bot which combines the ability to use an **OpenAI GPT-based** response format and also utilizes additional information from internal sources persisted into a SQLite3 database. 
+
+This particular example uses an assembled corpus of information related to the auto industry, but AutoBot can utilize any sort of dataset as an internal knowledgebase.
+
+Check out a [![demonstration video]()](https://youtu.be/iovmhhzY2PA) showcasing the functionality.
+
+## 🚧 Setup
 This project consists of two sections:
 1. The Discord bot instructions located in the root of this repo.
 2. The ETL instructions located inside of the 'etl' folder.
@@ -18,8 +27,8 @@ If SQLite3 is successfully installed globally, you can build this project by fol
 Additionally, one must have a Discord server configured to run a bot. An OpenAI token and Discord server token are required to run this program; instructions on how to do either of these things are outside the scope of this project.
 
 
-## Instructions
-To run this project do the following:
+## 📜 Instructions
+Perform the following to use AutoBot:
 1. Ensure that all Python libraries in 'requirements.txt' are installed.
 ```python
 pip install -r requirements.txt
@@ -50,21 +59,21 @@ python main.py
 # Ask a question about the automotives.db manufacturers table
 ```
 
-### Bot Specifications
+## 🤖 Bot Specifications
 1. Utilizes the automotives.db SQLite3 database
 2. Recognizes '!help' command; reply with instructions
 3. Provides 3 unique commands; '!cars' and '!manufacturers' which interact with the database, and '!funfact' which does not.
 4. The external datasource is the automotives.db from the ETL project.
 
-# Extract, Transfer, Load (ETL folder)
-- Focus: Automotive Industry
+# 🖥️ Extract, Transfer, Load
+- Dataset Focus: Automotive Industry
 
-## Instructions
+## 📜 Instructions
 - This project utilizes SQLite by downloading the bundle distribution and directly accessing it via the executables provided.
 - This executable can be found at https://www.sqlite.org/download.html, this project was built using Precompiled Binaries for Windows.
 - The .gitignore specifies these executables, and while SQLite3 can be added to PATH, it should be noted that this project was built with all files in .gitignore present at the root of the project.
 - If using SQLite3.exe directly in root of project, follow instructions exactly. If using sqlite3 via a global install with PATH, use 'sqlite3' instead of './sqlite3.exe'.
-### Database Init
+## Database Init
 - To build the database, simply run the setup script in the root directory.
 ```bash
 python build.py
@@ -81,7 +90,7 @@ select * from cars; # Should show all fields in cars
 pragma table_info(cars); # Should show cars table schema
 ```
 - We can use the interactive shell to build tables, but Python scripts are used for everything in this project. Only use sqlite3.exe directly for viewing purposes.
-### SQL Queries
+## SQL Queries
 - Here are some SQL queries we can now do on our database with relational connections.
 ```sql
 # Shows us all car models with a non-modified HP greater than 300
@@ -103,9 +112,9 @@ select count(country), country from manufacturers group by country order by coun
 select * from country_stat where country_id > 0;
 ```
 
-## Database Schema & Creation
+# ⬇️ Database Schema & Creation
 - With SQLite3, database creation is simple - using the connect function will either connect to an existing database, or if that database does not exist, simply creates it instead and continues on.
-### Tables
+## Tables
 - Manufacturers (Car manufacturers) (foreign key association to country via country_id, foreign key associations to chiptuners and cars via make_id)
 - Chiptuners (Instances of car modification specifications) (foreign key association with manufacturers via make_id)
 - Cars (Specific trims and years of car models) (foreign key association with manufacturers via make_id)
